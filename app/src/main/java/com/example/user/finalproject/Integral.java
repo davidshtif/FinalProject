@@ -12,6 +12,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -47,6 +48,11 @@ public class Integral extends AppCompatActivity implements AdapterView.OnItemSel
         et=(EditText)findViewById(R.id.et3);
         tv=(TextView)findViewById(R.id.yoeq2);
         spinner=(Spinner)findViewById(R.id.spinner2);
+
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.results,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         try {
             is=openFileInput("equation.txt");
