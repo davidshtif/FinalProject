@@ -8,106 +8,127 @@
     android:orientation="vertical"
     tools:context="com.example.user.finalproject.Derivative">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/title2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50dp"
         android:gravity="center"
-        android:text="f(x) -> f'(x)" />
+        android:text="f(x) -> f'(x)"
+        android:textSize="50dp" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
+    <TextView
+        android:id="@+id/yoeq1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Your equation:" />
+
     <WebView
-        android:id="@+id/wv"
+        android:id="@+id/wv1"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="250dp">
 
     </WebView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Space
-            android:layout_width="50dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView7"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-10<x<10"
-            android:textSize="20dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Space
-            android:layout_width="52dp"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <Switch
-            android:id="@+id/switch1"
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x="
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned|numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OR x="
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="f(x)"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="f'(x)"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textOff=""
-            android:textOn="" />
-
-        <Space
-            android:layout_width="30dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="x=" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned|numberDecimal" />
-
-    </LinearLayout>
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_weight="1"
-            android:text="f(x)" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="f'(x)"
-            android:textSize="20dp" />
-    </RadioGroup>
+            <Button
+                android:id="@+id/bt2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="calculate"
+                android:text="calculate"
+                android:textSize="30dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+            <Button
+                android:id="@+id/bt3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="reset1"
+                android:text="reset"
+                android:textSize="30dp" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="calculate"
-            android:textSize="30dp" />
+        </LinearLayout>
 
     </LinearLayout>
 

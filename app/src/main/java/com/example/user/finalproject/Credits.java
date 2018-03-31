@@ -21,7 +21,7 @@ public class Credits extends AppCompatActivity {
         finish();
     }
 
-    public void reset(View view) {
+    public void reset3(View view) {
         Intent res=new Intent(this,Main.class);
         startActivity(res);
     }
